@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estimate company revenue with a machine-learning prediction tool.">
+  <title>RevenueIQ | Company revenue insights</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-body">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">R</span> RevenueIQ</a>
+    <a class="nav-link" href="{{ url_for('prediction_page') }}">Revenue predictor <span aria-hidden="true">↗</span></a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> REVENUE INTELLIGENCE</p>
+        <h1>A clearer view of your company’s <span>revenue potential.</span></h1>
+        <p class="hero-description">
+          Get a data-driven revenue estimate from your company’s financial and operating profile.
+          Enter your details and let the prediction model do the calculations.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="{{ url_for('prediction_page') }}">Start a prediction <span aria-hidden="true">→</span></a>
+          <a class="secondary-link" href="#how-it-works">How it works</a>
+        </div>
+        <div class="trust-note"><span aria-hidden="true">✓</span> Fast, straightforward, and no account required</div>
+      </div>
+
+      <div class="hero-visual" aria-label="Revenue estimate illustration">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="chart-card">
+          <div class="chart-topline">
+            <span class="chart-label">REVENUE OUTLOOK</span>
+            <span class="chart-indicator"><span></span> MODEL ESTIMATE</span>
+          </div>
+          <div class="chart-placeholder">
+            <div class="chart-y-labels"><span>High</span><span>Mid</span><span>Low</span></div>
+            <svg viewBox="0 0 360 150" role="img" aria-label="Illustrative rising revenue trend">
+              <defs>
+                <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#35d6aa" stop-opacity=".24"/>
+                  <stop offset="100%" stop-color="#35d6aa" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M8 121 C45 112 56 119 83 99 S126 97 151 82 S187 91 217 62 S259 75 286 43 S327 45 352 15 L352 145 L8 145 Z" fill="url(#chartFill)"/>
+              <path d="M8 121 C45 112 56 119 83 99 S126 97 151 82 S187 91 217 62 S259 75 286 43 S327 45 352 15" fill="none" stroke="#35d6aa" stroke-linecap="round" stroke-width="4"/>
+              <circle cx="352" cy="15" r="6" fill="#35d6aa" stroke="#142b36" stroke-width="4"/>
+              <path d="M8 49H352 M8 96H352 M8 144H352" stroke="white" stroke-opacity=".1" stroke-dasharray="3 6"/>
+            </svg>
+          </div>
+          <div class="chart-bottom"><span>Company profile</span><span>Revenue estimate <b>→</b></span></div>
+        </div>
+        <div class="floating-tag"><span class="tag-icon" aria-hidden="true">↗</span><span>Powered by<br><strong>machine learning</strong></span></div>
+        <span class="visual-spark spark-one" aria-hidden="true">✳</span>
+        <span class="visual-spark spark-two" aria-hidden="true">✳</span>
+      </div>
+      <div class="hero-bottom-line"><span>01 / REVENUE FORECASTING</span><span>BUILT FOR BETTER BUSINESS DECISIONS</span></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">A SIMPLE WAY TO GET STARTED</p>
+        <h2>From company details to a revenue estimate.</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Share your profile</h3>
+          <p>Enter company type, jurisdiction, financial details, and operating information.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Run the model</h3>
+          <p>The prediction model evaluates your inputs using its learned company data patterns.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>View the estimate</h3>
+          <p>Get a revenue estimate in USD. Use it as an analytical reference, not a guarantee.</p>
+        </article>
+      </div>
+      <div class="bottom-cta">
+        <div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Make your next estimate count.</h2></div>
+        <a class="primary-link" href="{{ url_for('prediction_page') }}">Go to the predictor <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">R</span> RevenueIQ</a><span>Revenue predictions are estimates and may not reflect actual results.</span></footer>
+</body>
+</html>
